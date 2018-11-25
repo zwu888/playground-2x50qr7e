@@ -1,19 +1,19 @@
-# Welcome!
-
-This C++ template lets you get started quickly with a simple one-page playground.
-
+# memcpy vs. memmove
 ```C++ runnable
-#include <iostream>
+#include <stdio.h>
+#include <string.h>
 
-using namespace std;
-
-int main() 
+int main (void)
 {
-    cout << "Hello, World!";
+    char string [] = "stackoverflow";
+    char *first, *second;
+    first = string;
+    second = string;
+
+    puts(string);
+    memcpy(first+5, first, 5);
+    puts(first);
+    memmove(second+5, second, 5);
+    puts(second);
     return 0;
 }
-```
-
-# Advanced usage
-
-If you want a more complex example (external libraries, viewers...), use the [Advanced C++ template](https://tech.io/select-repo/598)
